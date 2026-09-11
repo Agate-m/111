@@ -27,7 +27,6 @@ jobs:
 
       - name: run script
         env:
-          TZ: Asia/Shanghai
           USERNAMES: ${{ secrets.USERNAMES }}
           PASSWORDS: ${{ secrets.PASSWORDS }}
         run: |
