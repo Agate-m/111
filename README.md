@@ -5,7 +5,7 @@
 
 > https://office.chaoxing.com/front/apps/seat/select?id=5483&day=2023-10-12&backLevel=2&pageToken=0f46f3acc7be4c60862cb9815870ddfd
 
-其中的`id=5483`的5483即为对应图书馆的id，将其填写到config.json中，座位联网后自己挑即可（详细填写参见后面的setting）
+其中的`id=5483`的5483即为对应图书馆的id，将其填写到config.json中，座位联网后自己挑即可。
 
 1.**fork该仓库**
 
@@ -17,7 +17,7 @@
 xxxxxxx,xxxxxxx
 ```
 
-2、**运行action**：在action -> auto_reserve -> run workflows 选择main分支即可。
+2、**运行action**：在action -> auto_reserve -> run workflows 选择默认分支即可。
 
 ## config配置
 之后编辑config.json并填写座位预约相关信息即可
@@ -40,7 +40,6 @@ xxxxxxx,xxxxxxx
     }
 }
 ```
-参考前面的运行方式即可。
 
 ### 无法预约情况debug方式
 > 1、电脑端访问："https://passport2.chaoxing.com/mlogin?loginType=1&newversion=true&fid=" 使用自己的用户名密码登录
