@@ -7,8 +7,6 @@
 
 其中的`id=5483`的5483即为对应图书馆的id，将其填写到config.json中，座位联网后自己挑即可（详细填写参见后面的setting）
 
-即可。
-
 1.**fork该仓库**
 
 2.**修改config.json**：这个仿照之前的方式进行修改即可，但是注意，username和password请留空或者随便填以防止泄漏个人账号密码。（具体的需要填写在自己repo的settings中）。时间什么也是需要修改（修改到仓库中）不要忘记。
@@ -19,8 +17,7 @@
 xxxxxxx,xxxxxxx
 ```
 
-2.**运行action**：在action -> auto_reserve -> run workflows 选择main分支即可。
-
+2、**运行action**：在action -> auto_reserve -> run workflows 选择main分支即可。
 
 ## config配置
 之后编辑config.json并填写座位预约相关信息即可
@@ -51,4 +48,3 @@ xxxxxxx,xxxxxxx
 > 3、尝试预约看看是否会出现验证方式
 
 目前无法实现跨单位座位预约。
-
