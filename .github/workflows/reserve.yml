@@ -6,7 +6,7 @@ name: auto_Reserve
 # or API.
 on:
   schedule:
-    - cron: "00 12 * * *" # 周一到周日每天晚上20:00启动
+    - cron: "58 11 * * *" # 周一到周日每天晚上20:00启动
   workflow_dispatch:
   
 jobs:
@@ -24,6 +24,10 @@ jobs:
           python -m pip install --upgrade pip
           sudo apt-get install build-essential libssl-dev libffi-dev  python3-dev -y
           pip install cryptography requests opencv-python
+
+      - name: Set timezone Asia/Shanghai
+        run: |
+          sudo timedatectl set-timezone Asia/Shanghai
 
       - name: run script
         env:
