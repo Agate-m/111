@@ -25,13 +25,9 @@ jobs:
           sudo apt-get install build-essential libssl-dev libffi-dev  python3-dev -y
           pip install cryptography requests opencv-python
 
-      - name: Set timezone Asia/Shanghai
-        run: |
-          sudo ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/locltime
-          echo "Asia/Shanghai" | sudo tee /etc/timezone
-
       - name: run script
         env:
+          TZ: Asia/Shanghai
           USERNAMES: ${{ secrets.USERNAMES }}
           PASSWORDS: ${{ secrets.PASSWORDS }}
         run: |
