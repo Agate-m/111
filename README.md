@@ -17,7 +17,7 @@
 xxxxxxx,xxxxxxx
 ```
 
-2、**运行action**：在action -> auto_reserve -> run workflows 选择默认分支即可。
+#### 2、**运行action**：在action -> auto_reserve -> run workflows 选择默认分支即可。
 
 ## config配置
 之后编辑config.json并填写座位预约相关信息即可
