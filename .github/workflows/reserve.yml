@@ -27,7 +27,8 @@ jobs:
 
       - name: Set timezone Asia/Shanghai
         run: |
-          sudo timedatectl set-timezone Asia/Shanghai
+           sudo ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+           echo "Asia/Shanghai" | sudo tee /etc/timezone
 
       - name: run script
         env:
