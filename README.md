@@ -1,10 +1,6 @@
 
 #### 1、 获取roomid（图书馆id）和seatid（座位号）
 
-在使用之前需要先在如下获取图书馆对应的id和座位号，下面的配置里已经提供了上海大学图书馆的id。对于不知道id的，可以通过如下方式进行：
-
-![image-20231012153826054](https://zideapicbed.oss-cn-shanghai.aliyuncs.com/img/image-20231012153826054.png)
-
 在进入预约图书馆列表界面时断开网络，点击你想预约的图书馆的`选座`按钮，会提示网页无法打开，此时点击`右上角的三条杠`，选择`复制链接`，会得到类似这样的链接：
 
 > https://office.chaoxing.com/front/apps/seat/select?id=5483&day=2023-10-12&backLevel=2&pageToken=0f46f3acc7be4c60862cb9815870ddfd
@@ -48,29 +44,6 @@ xxxxxxx,xxxxxxx
 }
 ```
 参考前面的运行方式即可。
-
-
-## 高级设置
-
-在main.py中有四个参数可以选择
-
-```python
-SLEEPTIME = 0.2 # 每次抢座的间隔
-ENDTIME = "07:01:00" # 根据学校的开始预约座位时间+1min即可
-
-ENABLE_SLIDER = False # 是否有滑块验证，设置为True开启滑块验证
-MAX_ATTEMPT = 4 # 最大尝试次数
-```
-可以直接进行修改，但是不建议把**SLEEPTIME**设置太小。
-
-## 存在的问题
-
-目前日志输出不是很人性化，如果出现了以下问题请提issue：
-
-- 出现了代码逻辑的错误
-- {当前人数过多，请等待5分钟后尝试}。这种是请求方式错误或者请求键值错误导致的，通常是由于学习通更新了预约导致的
-- 以字典格式输出的其他错误，仔细查看用户名密码，roomid和seatid是否填写正确。如果问题不能解决请在github上提issue
-- 滑块验证目前无法进行测试
 
 ### 无法预约情况debug方式
 > 1、电脑端访问："https://passport2.chaoxing.com/mlogin?loginType=1&newversion=true&fid=" 使用自己的用户名密码登录
